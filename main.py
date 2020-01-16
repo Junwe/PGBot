@@ -1,7 +1,8 @@
-import discord
 import asyncio
 import sys
 import string
+import discord
+import DropBoxUploder
 
 client = discord.Client()
 messageText = 'none message'
@@ -35,9 +36,11 @@ async def on_message(message):
 def main(argv):
     global messageText
 
-    CreateBuildMessage(argv[1],argv[2],argv[3])
+    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAQcN3sStrT-mCZ7dwzofzyCMCE6DG63TsN2lvFLFpSBeK", argv[2],"/PG/Build/" + argv[1])
+    drop.UpLoadFile()
+    CreateBuildMessage(argv[1],drop.GetFileLink(),argv[3])
 
-    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XhME3Q.IuLusrVomKB7cTOz40fbOwrhFYg')
+    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XiBw4Q.Gk4IXt6xsuymDlOwbhKo_f_x2Ng')
 
 
 def CreateBuildMessage(fileName,downloadLink,version):
@@ -45,6 +48,7 @@ def CreateBuildMessage(fileName,downloadLink,version):
 
     messageText = ''
     messageText += "새로운 파일이 올라갔습니다.\n"
+    messageText += "\n"
     messageText += "파일 이름 : " + fileName + "\n" 
     messageText += "다운로드 링크 : " + downloadLink + "\n"
     messageText += "버전 : " + version + "\n"

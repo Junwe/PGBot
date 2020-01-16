@@ -1,1 +1,1 @@
-python main.py
+python main.py SHJ(200116)_1.0.0.0_4.apk C:\Users\SHJ\Desktop\Google\SHJ\build\SHJ(200116)_1.0.0.0_4.apk 1.0.0.0
