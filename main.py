@@ -36,11 +36,11 @@ async def on_message(message):
 def main(argv):
     global messageText
 
-    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAQcN3sStrT-mCZ7dwzofzyCMCE6DG63TsN2lvFLFpSBeK", argv[2],"/PG/Build/" + argv[1])
+    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAARzmKBZSVvnrXx73f54Pr7bRRYnf0pMPNncBUk-RyVgRF", argv[2],"/PG/Build/" + argv[1])
     drop.UpLoadFile()
     CreateBuildMessage(argv[1],drop.GetFileLink(),argv[3])
 
-    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XiBw4Q.Gk4IXt6xsuymDlOwbhKo_f_x2Ng')
+    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XiFN-g.SOh_TMNIKlrc5gG_jrsWY3bzK5U')
 
 
 def CreateBuildMessage(fileName,downloadLink,version):
