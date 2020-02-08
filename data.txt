@@ -1,0 +1,4 @@
+discordCode:
+channelID:
+dropBoxCode:
+dropboxUplodePath:
