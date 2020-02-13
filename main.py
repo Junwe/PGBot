@@ -13,7 +13,7 @@ async def on_ready():
     print('logged in as')
     print(client.user.name)
     print(client.user.id)
-    channel = client.get_channel(663726361738739712)
+    channel = client.get_channel(677569915963572224)
     await channel.send(embed=discord.Embed(description = messageText))
     await client.logout()
     print('----------------')
@@ -36,11 +36,11 @@ async def on_message(message):
 def main(argv):
     global messageText
 
-    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAfiA8-aVNhApM-SiG_3MIT952sJYOJCznK_gHexTMtB3m", argv[2],"/PG/Build/" + argv[1])
+    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAfiA8-aVNhApM-SiG_3MIT952sJYOJCznK_gHexTMtB3m", argv[2],"/JPER/Build/" + argv[1])
     drop.UpLoadFile()
     CreateBuildMessage(argv[1],drop.GetFileLink(),argv[3])
 
-    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XjJlyA.KVE7nPxYDta7AfhwR2nmjYdKkTg')
+    client.run('Njc3NTcwMTU5NTIyODczMzc0.XkWKzg.dPOoJsFOQOQYG9dGhb5jAdXBTGg')
 
 
 def CreateBuildMessage(fileName,downloadLink,version):
