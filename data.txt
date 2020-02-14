@@ -1,4 +1,4 @@
-discordCode:
-channelID:
-dropBoxCode:
-dropboxUplodePath:
+discordCode:Njc3NTcwMTU5NTIyODczMzc0.XkWP6g.agJCkyx60ij1logOy3hTLeeWTBU
+channelID:677569915963572224
+dropBoxCode:3O3J4VcCmqAAAAAAAAAAo0-utHsljWFAQqilEn5Mwv1nlER3H_RhOHYOK6LdTAAH
+dropboxUplodePath:/JPER/Build/
