@@ -24,7 +24,7 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    f = open("/Users/shj/Desktop/UnityProject/Project_JPER/JPER_Bot/PGBot/data.bin",
+    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.txt",
              mode='r', encoding='UTF-8')
 
     lines = f.readlines()
@@ -63,21 +63,15 @@ def CreateBuildMessage(fileName, downloadLink, version):
     messageText += "다운로드 링크 : " + downloadLink + "\n"
     messageText += "버전 : " + version + "\n"
 
-
-def EncryptionToken(code):
-    for s in code:
-        code
-
-
 def SaveBinaryToken():
 
-    f = open("/Users/shj/Desktop/UnityProject/Project_JPER/JPER_Bot/PGBot/data.bin",
+    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.txt",
              mode='wb')
 
     tokenlist = ""
-    tokenlist += "discordCode:Njc3NTcwMTU5NTIyODczMzc0.Xky7SQ.mFJ-y04Sb1GLdYBOUF8gygmNH4k\n"
+    tokenlist += "discordCode:.XkzFTQ.pbxQct81tU69kNKHgIBGRFeMv_c\n"
     tokenlist += "channelID:677569915963572224\n"
-    tokenlist += "dropBoxCode:3O3J4VcCmqAAAAAAAAAAqteidViPilrvA7dc826_k9Ym1lWmdtWvQI9ES22QWJvU\n"
+    tokenlist += "dropBoxCode:\n"
     tokenlist += "dropboxUplodePath:/JPER/Build/\n"
 
     f.write(tokenlist.encode())
