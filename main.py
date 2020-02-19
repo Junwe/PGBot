@@ -35,12 +35,14 @@ async def on_message(message):
  
 def main(argv):
     global messageText
+    
+    # argv_test = ["","SHJ(200211)_1,0,0,0_2.apk","/Users/shj/Desktop/UnityProject/Project_SHJ/build/SHJ(200211)_1,0,0,0_2.apk","1,0,0,0"]
 
-    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAfiA8-aVNhApM-SiG_3MIT952sJYOJCznK_gHexTMtB3m", argv[2],"/PG/Build/" + argv[1])
+    drop = DropBoxUploder.DropBoxManager("3O3J4VcCmqAAAAAAAAAAlX6c1yOPi7GjI29eN61gTuVweKtqmyK91QE4P8GngM_H", argv[2],"/PG/Build/" + argv[1])
     drop.UpLoadFile()
     CreateBuildMessage(argv[1],drop.GetFileLink(),argv[3])
-
-    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XjJlyA.KVE7nPxYDta7AfhwR2nmjYdKkTg')
+    # CreateBuildMessage("test","test","test")
+    client.run('NjYzNjgyNTgyNDU3NjE0MzM2.XkKbWQ.dqMkOX3pdL_YC2rlgXp9HEOItAo')
 
 
 def CreateBuildMessage(fileName,downloadLink,version):
