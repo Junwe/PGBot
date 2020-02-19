@@ -75,9 +75,9 @@ def SaveBinaryToken():
              mode='wb')
 
     tokenlist = ""
-    tokenlist += "discordCode:Njc3NTcwMTU5NTIyODczMzc0.Xky7SQ.mFJ-y04Sb1GLdYBOUF8gygmNH4k\n"
+    tokenlist += "discordCode:.Xky7SQ.mFJ-y04Sb1GLdYBOUF8gygmNH4k\n"
     tokenlist += "channelID:677569915963572224\n"
-    tokenlist += "dropBoxCode:3O3J4VcCmqAAAAAAAAAAqteidViPilrvA7dc826_k9Ym1lWmdtWvQI9ES22QWJvU\n"
+    tokenlist += "dropBoxCode:\n"
     tokenlist += "dropboxUplodePath:/JPER/Build/\n"
 
     f.write(tokenlist.encode())
