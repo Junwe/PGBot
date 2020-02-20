@@ -24,7 +24,7 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.txt",
+    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.bin",
              mode='r', encoding='UTF-8')
 
     lines = f.readlines()
