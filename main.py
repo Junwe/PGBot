@@ -32,9 +32,9 @@ def ReadBotData():
     for line in lines:
         data = line.split(':')
         if "\n" in data[1]:
-            datalist.append(data[1][:-1])
+            datalist.append(data[1][:-1].replace("!",""))
         else:
-            datalist.append(data[1])
+            datalist.append(data[1].replace("!",""))
 
     print(datalist)
 
