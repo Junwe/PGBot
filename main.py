@@ -24,7 +24,7 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    f = open("/Users/shj/Desktop/UnityProject/Project_JPER/JPER_Bot/PGBot/data.bin",
+    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.bin",
              mode='r', encoding='UTF-8')
 
     lines = f.readlines()
@@ -32,9 +32,9 @@ def ReadBotData():
     for line in lines:
         data = line.split(':')
         if "\n" in data[1]:
-            datalist.append(data[1][:-1])
+            datalist.append(data[1][:-1].replace("!",""))
         else:
-            datalist.append(data[1])
+            datalist.append(data[1].replace("!",""))
 
     print(datalist)
 
@@ -63,19 +63,17 @@ def CreateBuildMessage(fileName, downloadLink, version):
     messageText += "다운로드 링크 : " + downloadLink + "\n"
     messageText += "버전 : " + version + "\n"
 
-
-def EncryptionToken(code):
-    for s in code:
-        code
-
-
 def SaveBinaryToken():
 
-    f = open("/Users/shj/Desktop/UnityProject/Project_JPER/JPER_Bot/PGBot/data.bin",
+    f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.txt",
              mode='wb')
 
     tokenlist = ""
+<<<<<<< HEAD
     tokenlist += "discordCode:.Xky7SQ.mFJ-y04Sb1GLdYBOUF8gygmNH4k\n"
+=======
+    tokenlist += "discordCode:.XkzFTQ.pbxQct81tU69kNKHgIBGRFeMv_c\n"
+>>>>>>> origin
     tokenlist += "channelID:677569915963572224\n"
     tokenlist += "dropBoxCode:\n"
     tokenlist += "dropboxUplodePath:/JPER/Build/\n"
