@@ -45,12 +45,12 @@ def main(argv):
     global messageText
     ReadBotData()
 
-    # drop = DropBoxUploder.DropBoxManager(
-    #     datalist[2], argv[2], datalist[3] + argv[1])
-    # drop.UpLoadFile()
-    # CreateBuildMessage(argv[1], drop.GetFileLink(), argv[3])
+    drop = DropBoxUploder.DropBoxManager(
+        datalist[2], argv[2], datalist[3] + argv[1])
+    drop.UpLoadFile()
+    CreateBuildMessage(argv[1], drop.GetFileLink(), argv[3])
 
-    # client.run(datalist[0])
+    client.run(datalist[0])
 
 
 def CreateBuildMessage(fileName, downloadLink, version):
