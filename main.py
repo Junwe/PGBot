@@ -3,6 +3,7 @@ import sys
 import string
 import discord
 import DropBoxUploder
+import os
 
 client = discord.Client()
 messageText = 'none message'
@@ -24,7 +25,7 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    f = open("data.bin",
+    f = open( os.path.dirname(os.path.abspath(__file__)) + "/data.bin",
              mode='r', encoding='UTF-8')
 
     lines = f.readlines()
