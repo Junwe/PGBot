@@ -25,7 +25,7 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    print(os.path.dirname(os.path.abspath(__file__)) + "/data.bin")
+    
     f = open( os.path.dirname(os.path.abspath(__file__)) + "/data.bin",
              mode='r', encoding='UTF-8')
 
