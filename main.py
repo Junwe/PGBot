@@ -25,8 +25,8 @@ async def on_ready():
 
 def ReadBotData():
     global datalist
-    
-    f = open( os.path.dirname(os.path.abspath(__file__)) + "/data.bin",
+
+    f = open(os.path.dirname(os.path.abspath(__file__)) + "/data.bin",
              mode='r', encoding='UTF-8')
 
     lines = f.readlines()
@@ -34,9 +34,9 @@ def ReadBotData():
     for line in lines:
         data = line.split(':')
         if "\n" in data[1]:
-            datalist.append(data[1][:-1].replace("!",""))
+            datalist.append(data[1][:-1].replace("!", ""))
         else:
-            datalist.append(data[1].replace("!",""))
+            datalist.append(data[1].replace("!", ""))
 
     print(datalist)
 
@@ -50,12 +50,12 @@ def main(argv):
     drop = DropBoxUploder.DropBoxManager(
         datalist[2], argv[2], datalist[3] + argv[1])
     drop.UpLoadFile()
-    CreateBuildMessage(argv[1], drop.GetFileLink(), argv[3])
+    CreateBuildMessage(argv[1], drop.GetFileLink(), argv[3], argv[4])
 
     client.run(datalist[0])
 
 
-def CreateBuildMessage(fileName, downloadLink, version):
+def CreateBuildMessage(fileName, downloadLink, version, Buildmessage):
     global messageText
 
     messageText = ''
@@ -64,6 +64,7 @@ def CreateBuildMessage(fileName, downloadLink, version):
     messageText += "파일 이름 : " + fileName + "\n"
     messageText += "다운로드 링크 : " + downloadLink + "\n"
     messageText += "버전 : " + version + "\n"
+    messageText += "빌드 메시지 : " + Buildmessage + "\n"
 
 # def SaveBinaryToken():
     # f = open("/Users/shj/Desktop/UnityProject/Project_SHJ/PG_Bot/PGBot/data.txt",
@@ -76,6 +77,7 @@ def CreateBuildMessage(fileName, downloadLink, version):
     # tokenlist += "dropboxUplodePath:/JPER/Build/\n"
 
     # f.write(tokenlist.encode())
+
 
 if __name__ == "__main__":
     main(sys.argv)
